@@ -6,18 +6,22 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 // Material Design
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatButtonModule, MatCheckboxModule} from '@angular/material';
-import {MatMenuModule} from '@angular/material/menu';
-import {MatIconModule} from '@angular/material/icon';
-import {MatCardModule} from '@angular/material/card';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatDividerModule} from '@angular/material/divider';
-import {MatListModule} from '@angular/material/list';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule, MatCheckboxModule, MatSidenavModule } from '@angular/material';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatListModule } from '@angular/material/list';
+import { LayoutModule } from '@angular/cdk/layout';
+import { NavigationComponent } from './navigation/navigation.component';
 
 @NgModule({
     declarations: [
-        AppComponent
+        AppComponent,
+        NavigationComponent
     ],
     imports: [
         BrowserModule,
@@ -27,13 +31,16 @@ import {MatListModule} from '@angular/material/list';
         // Material Design
         BrowserAnimationsModule,
         MatButtonModule,
+        MatFormFieldModule,
         MatCheckboxModule,
         MatMenuModule,
         MatIconModule,
         MatCardModule,
         MatToolbarModule,
         MatDividerModule,
-        MatListModule
+        MatListModule,
+        LayoutModule,
+        MatSidenavModule
     ],
     providers: [],
     bootstrap: [AppComponent]
