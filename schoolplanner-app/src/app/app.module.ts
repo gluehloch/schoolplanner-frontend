@@ -5,10 +5,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-// Material Design
+// Application Components
+import { RegisterComponent } from './register/register.component';
+
+// Material Design Components
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule, MatCheckboxModule, MatSidenavModule } from '@angular/material';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
@@ -21,17 +25,20 @@ import { NavigationComponent } from './navigation/navigation.component';
 @NgModule({
     declarations: [
         AppComponent,
-        NavigationComponent
+        NavigationComponent,
+        RegisterComponent
+
     ],
     imports: [
         BrowserModule,
         AppRoutingModule,
         FormsModule,
         ReactiveFormsModule,
-        // Material Design
+        // Material Design Components
         BrowserAnimationsModule,
         MatButtonModule,
         MatFormFieldModule,
+        MatInputModule,
         MatCheckboxModule,
         MatMenuModule,
         MatIconModule,
