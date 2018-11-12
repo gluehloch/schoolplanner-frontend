@@ -5,13 +5,21 @@
         <mat-card-subtitle>Hier findet die Registrierung statt. Bitte Email Adresse bereit halten.</mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
-            <div class="example-container">
-        <form class="example-form">
-            <mat-form-field>
-                <input matInput placeholder="Enter your email" [formControl]="email" required>
-                <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
-            </mat-form-field>
-        </form>
+        <div class="example-container">
+            <form class="example-form">
+                <mat-form-field style="width: 100%">
+                    <input matInput placeholder="Nickname" [formControl]="nickname" required>
+                    <mat-error *ngIf="nickname.invalid">{{getErrorMessage()}}</mat-error>
+                </mat-form-field>
+                <mat-form-field style="width: 100%">
+                    <input matInput placeholder="Passwort" [formControl]="password" required>
+                    <mat-error *ngIf="password.invalid">{{getErrorMessage()}}</mat-error>
+                </mat-form-field>
+                <mat-form-field style="width: 100%">
+                    <input matInput placeholder="Enter your email" [formControl]="email" required>
+                    <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+                </mat-form-field>
+            </form>
         </div>
     </mat-card-content>
     <mat-card-actions>

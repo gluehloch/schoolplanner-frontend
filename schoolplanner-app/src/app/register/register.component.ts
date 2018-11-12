@@ -9,6 +9,8 @@ import { FormControl, Validators } from '@angular/forms';
 })
 export class RegisterComponent {
 
+    nickname = new FormControl('', [Validators.required]);
+    password = new FormControl('', [Validators.required]);
     email = new FormControl('', [Validators.required, Validators.email]);
 
     constructor() { }
