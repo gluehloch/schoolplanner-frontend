@@ -7,6 +7,9 @@ import { AppComponent } from './app.component';
 
 // Application Components
 import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
+import { UserComponent } from './user/user.component';
+
 
 // Material Design Components
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -26,7 +29,9 @@ import { NavigationComponent } from './navigation/navigation.component';
     declarations: [
         AppComponent,
         NavigationComponent,
-        RegisterComponent
+        RegisterComponent,
+        LoginComponent,
+        UserComponent
 
     ],
     imports: [

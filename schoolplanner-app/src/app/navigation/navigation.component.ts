@@ -3,6 +3,8 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
+import { FormControl, Validators } from '@angular/forms';
+
 @Component({
     selector: 'app-navigation',
     templateUrl: './navigation.component.html',
