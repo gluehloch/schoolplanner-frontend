@@ -20,4 +20,9 @@ export class RegisterComponent {
             this.email.hasError('email') ? 'Not a valid email' : '';
     }
 
+    getEmailErrorMessage() {
+        return this.email.hasError('required') ? 'You must enter a value' :
+            this.email.hasError('email') ? 'Not a valid email' : '';
+    }
+
 }
