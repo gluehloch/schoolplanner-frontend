@@ -24,6 +24,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
 import { LayoutModule } from '@angular/cdk/layout';
 import { NavigationComponent } from './navigation/navigation.component';
+import { SchoolComponent } from './school/school.component';
 
 @NgModule({
     declarations: [
@@ -31,7 +32,8 @@ import { NavigationComponent } from './navigation/navigation.component';
         NavigationComponent,
         RegisterComponent,
         LoginComponent,
-        UserComponent
+        UserComponent,
+        SchoolComponent
 
     ],
     imports: [
