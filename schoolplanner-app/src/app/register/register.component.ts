@@ -9,6 +9,12 @@ import { FormControl, Validators } from '@angular/forms';
 })
 export class RegisterComponent {
 
+    private readonly MSG_REQUIRED = 'You must enter a value';
+    private readonly MSG_INVALID_PASSWORD = 'Not a valid password';
+    private readonly MSG_INVLID_EMAIL = 'Not a valid email';
+    private readonly MSG_INVALID_NICKNAME = 'Not a valid nickname';
+    private readonly MSG_EMPTY = '';
+
     nickname = new FormControl('', [Validators.required]);
     password = new FormControl('', [Validators.required]);
     passwordConfirm = new FormControl('', [Validators.required]);
@@ -17,23 +23,35 @@ export class RegisterComponent {
     constructor() { }
 
     getNicknameErrorMessage() {
-        return this.nickname.hasError('required') ? 'You must enter a value' :
-            this.email.hasError('nickname') ? 'Not a valid nickname' : '';
+        return this.nickname.hasError('required')
+            ? this.MSG_REQUIRED
+            : this.email.hasError('nickname')
+                ? this.MSG_INVALID_NICKNAME
+                : this.MSG_EMPTY;
     }
 
     getPasswordErrorMessage() {
-        return this.password.hasError('required') ? 'You must enter a value' :
-            this.password.hasError('password') ? 'Not a valid password' : '';
+        return this.password.hasError('required')
+            ? this.MSG_REQUIRED
+            : this.password.hasError('password')
+                ? this.MSG_INVALID_PASSWORD
+                : this.MSG_EMPTY;
     }
 
     getPasswordConfirmErrorMessage() {
-        return this.passwordConfirm.hasError('required') ? 'You must enter a value' :
-            this.passwordConfirm.hasError('password') ? 'Not a valid password' : '';
+        return this.passwordConfirm.hasError('required')
+            ? this.MSG_REQUIRED
+            : this.passwordConfirm.hasError('password')
+                ? this.MSG_INVALID_PASSWORD
+                : this.MSG_EMPTY;
     }
 
     getEmailErrorMessage() {
-        return this.email.hasError('required') ? 'You must enter a value' :
-            this.email.hasError('email') ? 'Not a valid email' : '';
+        return this.email.hasError('required')
+            ? this.MSG_REQUIRED
+            : this.email.hasError('email')
+                ? this.MSG_INVLID_EMAIL
+                : this.MSG_EMPTY;
     }
 
 }

@@ -17,7 +17,7 @@
     <mat-card-content>
         <form class="form-register">
             <mat-form-field style="width: 100;">
-                <input matInput placeholder="Nickname" [formControl]="nickname" required>
+                <input matInput placeholder="Nickname" [formControl]="nickname" required autofocus>
                 <mat-error *ngIf="nickname.invalid">{{getNicknameErrorMessage()}}</mat-error>
             </mat-form-field>
             <mat-form-field style="width: 100;">
