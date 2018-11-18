@@ -15,6 +15,7 @@ import { UserComponent } from './user/user.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule, MatCheckboxModule, MatSidenavModule } from '@angular/material';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatGridListModule } from '@angular/material/grid-list';
 import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
@@ -45,6 +46,7 @@ import { SchoolComponent } from './school/school.component';
         BrowserAnimationsModule,
         MatButtonModule,
         MatFormFieldModule,
+        MatGridListModule,
         MatInputModule,
         MatCheckboxModule,
         MatMenuModule,
