@@ -11,13 +11,24 @@ export class RegisterComponent {
 
     nickname = new FormControl('', [Validators.required]);
     password = new FormControl('', [Validators.required]);
+    passwordConfirm = new FormControl('', [Validators.required]);
     email = new FormControl('', [Validators.required, Validators.email]);
 
     constructor() { }
 
-    getErrorMessage() {
-        return this.email.hasError('required') ? 'You must enter a value' :
-            this.email.hasError('email') ? 'Not a valid email' : '';
+    getNicknameErrorMessage() {
+        return this.nickname.hasError('required') ? 'You must enter a value' :
+            this.email.hasError('nickname') ? 'Not a valid nickname' : '';
+    }
+
+    getPasswordErrorMessage() {
+        return this.password.hasError('required') ? 'You must enter a value' :
+            this.password.hasError('password') ? 'Not a valid password' : '';
+    }
+
+    getPasswordConfirmErrorMessage() {
+        return this.passwordConfirm.hasError('required') ? 'You must enter a value' :
+            this.passwordConfirm.hasError('password') ? 'Not a valid password' : '';
     }
 
     getEmailErrorMessage() {
