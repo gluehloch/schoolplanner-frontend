@@ -7,9 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
     title = 'schoolplanner-app';
-    model = {
-        left: true,
-        middle: false,
-        right: false
-    };
+
+    // @ViewChild(MatMenuTrigger) trigger: MatMenuTrigger;
+
+    someMethod() {
+        // this.trigger.openMenu();
+    }
+
 }
